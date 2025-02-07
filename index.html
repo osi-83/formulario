@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de inscrição</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+
+    <section>
+
+        <form action="">
+
+            <label for="nome_completo">Nome completo: </label>
+            <input type="text" id="nome_completo" name="nome_completo" required><br>
+
+            <label for="email">E-mail: </label>
+            <input type="email" id="E-mail" name="E-mail" required><br>
+
+            <label for="idade">Idade: </label>
+            <input type="number" id="idade" name="idade" required><br>
+
+            <label for="escolha">Para qual matéria você está se candidatando para lecionar?: </label>
+            <select name="escolha" id="escolha">
+                <option value=""></option>
+                <option value="portugues">Portugues</option>
+                <option value="biologia">Biologia</option>
+                <option value="ciencias">Ciências</option>
+                <option value="historia">História</option>
+                <option value="geografia">Geografia</option>
+                <option value="artes">Artes</option>
+            </select><br>
+
+            <label for="turnos">Escolha o turno que deseja: </label>
+            <select name="turnos" id="turnos">
+                <option value=""></option>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select><br>
+
+            <label for="nivel_escolaridade">Nivel de escolaridade: </label>
+            <select name="nivel_escolaridade" id="nivel_escolaridade">
+                <option value=""></option>
+                <option value="ensino_superior_completo">Ensino superior completo</option>
+                <option value="cursando_mestrado">Cursando mestrado</option>
+                <option value="mestrado_completo">Mestrado completo</option>
+                <option value="cursando_doutorado">Cursando doutorado</option>
+                <option value="doutorado_completo">Doutorado completo</option>
+            </select>
+            <br>
+
+            <label for="descricao">Descrição sobre si:</label>
+            <textarea name="descricao" id="descricao" cols="30" rows="10"
+                oninput="limitarTexto(this, 200)"></textarea><br>
+
+            <script>
+                function limitarTexto(textarea, limite) {
+                    if (textarea.value.length > limite) {
+                        textarea.value = textarea.value.substring(0, limite);
+                    }
+                }
+            </script>
+
+
+
+            </textarea>
+
+        </form>
+    </section>
+
+</body>
+
+</html>
